@@ -1,0 +1,11 @@
+# Generate the base64-encoded string for your credentials used for authenticating to Red Hat’s customer portal
+# echo -n <string> | base64
+#
+apiVersion: v1
+kind: Secret
+metadata:
+  name: subscription-manager
+  namespace: openstack
+data:
+  username: <base64_username>
+  password: <base64_password>
